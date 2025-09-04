@@ -1,0 +1,31 @@
+<%-include('../cabecalho.ejs')%>
+    <h1>Filmes</h1>
+    <a href="/filme/add">Adicionar Filmes</a>
+    <table>
+        <tr>
+            <td>Título</td>
+            <td>Diretor</td>
+            <td>Ano</td>
+            <td>Gênero</td>
+            <td>Duração</td>
+            <td>Classificação</td>
+            <td>Ações</td>
+        </tr>
+      
+        <%for (const {id, titulo, diretor, ano, genero, duracao, classificacao} of Filmes) {%>
+        <tr>
+            <td><%=titulo%></td>
+            <td><%=diretor%></td>
+            <td><%=ano%></td>
+            <td><%=genero%></td>
+            <td><%=duracao%></td>
+            <td><%=classificacao%></td>
+            <td><a href="/filme/edt/<%=id%>">Editar</a>
+            <a href="/filme/del/<%=id%>">Excluir</a></td>
+        </tr>
+        <%}%>
+    </table>
+ <%-include('../rodape.ejs')%>
+
+
+  
