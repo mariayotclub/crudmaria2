@@ -1,34 +1,48 @@
-<%-include('../cabecalho.ejs')%>
-<h1>Editar Filme</h1>
-<div>
-<a href="/filme/lst">Listar</a>
-</div>
-<div>
-    <form  method="post">
-       
+<%-include('.. /cabecalho.ejs')%>
+  <h1>Editar Filme</h1>
+  <div>
+    <a href="/filme/lst">Listar</a>
+  </div>
+  <div>
+    <form method="post">
 
-        <label>Título:</label>
-        <input type="text" name="titulo" 
-        value="<%=titulo.nome%>"><br>
-          <label>Gênero:</label>
-        <input type="text" name="genero" 
-        value="<%=genero.nome%>"><br>
-          <label>Gênero:</label>
-        <input type="text" name="genero" 
-        value="<%=genero.nome%>"><br>
-          <label>Gênero:</label>
-        <input type="text" name="genero" 
-        value="<%=genero.nome%>"><br>
-          <label>Gênero:</label>
-        <input type="text" name="genero" 
-        value="<%=genero.nome%>"><br>
-          <label>Gênero:</label>
-        <input type="text" name="genero" 
-        value="<%=genero.nome%>"><br>
-        
-        <button type="submit">Salvar Alterações</button>
-        
+
+      <label>Título:</label>
+      <input type="text" name="titulo" value="<%=titulo.nome%>"><br>
+      <label>Diretor:</label>
+      <input type="text" name="diretor" value="<%=diretor.nome%>"><br>
+      <label>Ano:</label>
+      <input type="text" name="ano" value="<%=ano.nome%>"><br>
+      <label>Gênero:</label>
+      <select name="genero" id="" value="<%=genero.nome%>">
+        <option value=""></option>
+        <option value="Comédia">Comédia</option>
+        <option value="Romance">Romance</option>
+        <option value="Ação">Ação</option>
+        <option value="Drama">Drama</option>
+        <option value="Bigode Maneiro">Bigode maneiro</option>
+        <option value="Kdrama">Kdrama</option>
+        <option value="Terror">Terror</option>
+        <option value="Infantil">Infantil</option>
+      </select>
+      <label>Duração:</label>
+      <input type="text" name="duracao" value="<%=duracao.nome%>"><br>
+      <label>Classificação:</label>
+      <select name="classificacao" id="" value="<%=classificacao.nome%>">
+        <option value=""></option>
+        <option value="Livre">Livre</option>
+        <option value="10+">10+</option>
+        <option value="12+">12+</option>
+        <option value="14+">14+</option>
+        <option value="16+">16+</option>
+        <option value="18+">18+</option>
+        <option value="P">PROIBIDO</option>
+        <option value="99+">99+</option>
+      </select>
+
+      <button type="submit">Salvar Alterações</button>
+
     </form>
-</div>
+  </div>
 
-<%-include('../rodape.ejs')%>
+  <%-include('.. /rodape.ejs')%>
